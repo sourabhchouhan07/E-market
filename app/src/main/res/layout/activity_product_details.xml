@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProductDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backButton_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_back"
+            android:padding="4dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shopName_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="20"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:text="Product Details"
+            android:padding="4dp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cartButton"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_cart1"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_above="@id/addToCartButton"
+        android:padding="2dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/productImage_details"
+                android:layout_width="match_parent"
+                android:layout_height="278dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/image"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/productName_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Mangat Ram Urad Dal"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rupeeSymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="₹"
+                    android:padding="5dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productPrice_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="100"
+                    android:padding="5dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/tagButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:alpha="0.6"
+                    android:src="@drawable/ic_tag"
+                    tools:layout_editor_absoluteY="431dp"
+                    android:layout_weight="1"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tagText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="104 sold till now"
+                    android:layout_weight="5"
+                    android:paddingTop="2dp"
+                    android:textSize="16sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shippingButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.6"
+                    android:src="@drawable/ic_cartoutline"
+                    tools:layout_editor_absoluteX="197dp"
+                    tools:layout_editor_absoluteY="432dp"
+                    android:layout_weight="1"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shippingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Free Shipping"
+                    android:layout_weight="5"
+                    android:textSize="16sp"
+                    android:paddingTop="2dp"
+                    />
+
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Description"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/productDescription_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Porting devices across a professional set up can be a very useful accessory for professionals who seek seamless connectivity every time! Besides there are few such gadgets that really do the deal when it comes to helping with multiple porting! This is where Mport 4B fits the picture. It saves all your trouble that comes associated with multitasking. This multiport USB hub has 4 separate USB ports to plug in devices at the same time. Besides it has 1 Type C port for extra power data transaction from a larger device that needs more power for the procedure. Mport 4B uses lightning speed in device transaction and with the blink of an eye all your tasks are accomplished. It is built for the long run and has a sturdy body for maximum longevity. The USB port hub has a great compatibility which is hard to find in its league of hubs and hence makes it unique in its being. If you are someone who juggles multitasking, and needs the perfect aide for so, get your hands on Mport 4B and port into seamless multitasking!"
+                android:layout_marginStart="5dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:justificationMode="inter_word"
+                />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addToCartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_700"
+        android:text="ADD TO CART"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
